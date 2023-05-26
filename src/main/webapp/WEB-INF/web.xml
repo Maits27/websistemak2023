@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <session-config>
+        <session-timeout>1</session-timeout> <!--1 minutu saioa iraun-->
+    </session-config>
+
+    <listener>
+        <listener-class>com.example.nirepaketea.MySessionListener</listener-class>
+    </listener>
+
+    <servlet-mapping>
+        <servlet-name>KaixoServlet</servlet-name>
+        <url-pattern>/kaixo</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>KaixoServlet</servlet-name>
+        <servlet-class>com.example.websistemak2023.KaixoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KaixoMVCServlet</servlet-name>
+        <url-pattern>/kaixomvc</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>KaixoMVCServlet</servlet-name>
+        <servlet-class>com.example.websistemak2023.KaixoMVCServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KaixoJSPServlet</servlet-name>
+        <url-pattern>/kaixojsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>KaixoJSPServlet</servlet-name>
+        <servlet-class>com.example.websistemak2023.KaixoJSPServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KaixoJSP2Servlet</servlet-name>
+        <url-pattern>/kaixojsp2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>KaixoJSP2Servlet</servlet-name>
+        <servlet-class>com.example.websistemak2023.KaixoJSP2Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DatuBilketaServlet</servlet-name>
+        <url-pattern>/servlet/DatuBilketa</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DatuBilketaServlet</servlet-name>
+        <servlet-class>com.example.websistemak2023.DatuBilketaServlet</servlet-class>
+    </servlet>
+
+
+
+    <!--ETXEKOA:-->
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/servlet/LoginJSP</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.nirepaketea.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/servlet/Main</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.example.nirepaketea.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CacheServlet</servlet-name>
+        <url-pattern>/cache</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CacheServlet</servlet-name>
+        <servlet-class>com.example.websistemak2023.CacheServlet</servlet-class>
+    </servlet>
+</web-app>
